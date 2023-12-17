@@ -1,0 +1,18 @@
+import random
+
+limit = int(input('Введите верхний предел:'))
+if limit < 1:
+    limit =  int(input('Введите положительное число:'))
+number = random.randint(1,limit)
+attempts = 0
+print('Загадано число от 1 до',limit)
+cucunumber = 0
+while number != cucunumber:
+    cucunumber = int(input('введите число:'))
+    attempts += 1
+    if cucunumber > number:
+        print('Ваше число больше загаданного.')
+    if cucunumber < number:
+        print('Ваше число меньше загаданного.')
+
+print('Вы угадали число',number,'за',attempts,'попыток')
